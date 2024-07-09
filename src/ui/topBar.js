@@ -63,9 +63,55 @@ export function topBar() {
         k.go("exchange")
     });
 
+    exchangeFrame = k.add([
+        k.rect(220, 45),
+        k.pos(410, 10),
+        k.color(255, 255, 255),
+        k.area()
+    ])
+
+    exchangeText = k.add([
+        k.text("[E] Exchange"),
+        k.pos(420, 20),
+        k.color(20, 20, 20),
+        k.scale(0.75),
+        k.area()
+    ])
+
+    exchangeFrame.onHoverUpdate(() => {
+        exchangeFrame.color = k.rgb(200, 200, 200)
+    })
+
+    exchangeFrame.onHoverEnd(() => {
+        exchangeFrame.color = k.rgb(255, 255, 255)
+    })
+
     // Store scene
     k.onKeyPress("s" || "S", () => {
         console.log("Changing to store scene")
         k.go("store")
     });
+
+    storeFrame = k.add([
+        k.rect(190, 45),
+        k.pos(640, 10),
+        k.color(255, 255, 255),
+        k.area()
+    ])
+
+    storeText = k.add([
+        k.text("[S] Store"),
+        k.pos(650, 20),
+        k.color(20, 20, 20),
+        k.scale(0.75),
+        k.area()
+    ])
+
+    storeFrame.onHoverUpdate(() => {
+        storeFrame.color = k.rgb(200, 200, 200)
+    })
+
+    storeFrame.onHoverEnd(() => {
+        storeFrame.color = k.rgb(255, 255, 255)
+    })
 }
