@@ -2,7 +2,7 @@ export function HomeScene() {
     k.scene("home", () => {
         // Title text
         const titleText = k.add([
-            k.text("Delta\nCrypto Mining Simulator"),
+            k.text("BitMiner"),
             k.pos(k.width() / 2, k.height() / 2),
             k.color(255, 255, 255),
             k.scale(1.75),
@@ -19,7 +19,7 @@ export function HomeScene() {
         ])
 
         k.onKeyPress("enter", () => {
-            k.scene("mining")
+            k.go("mining")
         })
     })
 }
