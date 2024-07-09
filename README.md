@@ -1,27 +1,8 @@
-# Folder structure
+# BitMiner
 
-- `src` - source code for your kaboom project
-- `www` - distribution folder, contains your index.html, built js bundle and static assets
+> [!WARNING]
+> This project is work in progress, and is undergoing major changes and improvements without prior notice.
 
+Rewrite, and release version of my previous crypto mining simulator game project, [CMS](https://github.com/luq-mn/CMS).
 
-## Development
-
-```sh
-$ npm run dev
-```
-
-will start a dev server at http://localhost:8000
-
-## Distribution
-
-```sh
-$ npm run build
-```
-
-will build your js files into `www/main.js`
-
-```sh
-$ npm run bundle
-```
-
-will build your game and package into a .zip file, you can upload to your server or itch.io / newground etc.
+Written using [Kaboom.js](https://kaboomjs.com/), in JavaScript. Code is written by myself - unless mentioned otherwise, with some code autocompleted with Google Gemini.
