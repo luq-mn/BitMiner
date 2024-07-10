@@ -28,6 +28,11 @@ export function topBar() {
         miningFrame.color = k.rgb(255, 255, 255)
     })
 
+    miningFrame.onClick(() => {
+        console.log("Changing to mining scene")
+        k.go("mining")
+    })
+
     // Wallet scene
     k.onKeyPress("w" || "W", () => {
         console.log("Changing to wallet scene")
@@ -55,6 +60,11 @@ export function topBar() {
 
     walletFrame.onHoverEnd(() => {
         walletFrame.color = k.rgb(255, 255, 255)
+    })
+
+    walletFrame.onClick(() => {
+        console.log("Changing to wallet scene")
+        k.go("wallet")
     })
 
     // Exchange scene
@@ -86,6 +96,11 @@ export function topBar() {
         exchangeFrame.color = k.rgb(255, 255, 255)
     })
 
+    exchangeFrame.onClick(() => {
+        console.log("Changing to exchange scene")
+        k.go("exchange")
+    })
+
     // Store scene
     k.onKeyPress("s" || "S", () => {
         console.log("Changing to store scene")
@@ -113,5 +128,10 @@ export function topBar() {
 
     storeFrame.onHoverEnd(() => {
         storeFrame.color = k.rgb(255, 255, 255)
+    })
+
+    storeFrame.onClick(() => {
+        console.log("Changing to store scene")
+        k.go("store")
     })
 }
