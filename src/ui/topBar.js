@@ -1,5 +1,3 @@
-import { cryptoTopInfoHover } from "./hover";
-
 export function topNav() {
     // Mining scene
     k.onKeyPress("q" || "Q", () => {

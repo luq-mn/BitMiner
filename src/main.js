@@ -1,7 +1,7 @@
 import kaboom from 'kaboom';
 k = kaboom({
-	width: 1600,
-	height: 900,
+	// width: 1600,
+	// height: 900,
 	background: [0, 0, 0]
 });
 
