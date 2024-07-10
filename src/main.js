@@ -12,6 +12,7 @@ import { WalletScene } from './ui/scenes/wallet';
 import { ExchangeScene } from './ui/scenes/exchange';
 import { StoreScene } from './ui/scenes/store';
 
+// Load the scenes
 HomeScene()
 MiningScene()
 WalletScene()
