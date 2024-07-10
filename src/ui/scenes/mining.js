@@ -13,6 +13,7 @@ export function MiningScene() {
 
         bar = topNav()
         info = topInfo()
+        
         k.onUpdate(() => {
             testRect.pos.x = k.width() / 2
             testRect.pos.y = k.height() / 2
