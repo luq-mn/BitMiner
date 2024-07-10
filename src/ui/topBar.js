@@ -1,22 +1,23 @@
-export function topBar() {
+export function topNav() {
     // Mining scene
     k.onKeyPress("q" || "Q", () => {
         console.log("Changing to mining scene")
         k.go("mining")
     });
 
-    miningFrame = k.add([
-        k.rect(190, 45),
+    const miningFrame = k.add([
+        k.rect(250, 50),
         k.pos(10, 10),
         k.color(255, 255, 255),
         k.area()
     ])
 
-    miningText = k.add([
+    const miningText = k.add([
         k.text("[Q] Mining"),
-        k.pos(20, 20),
+        k.pos(135, 35),
         k.color(20, 20, 20),
         k.scale(0.75),
+        k.anchor("center"),
         k.area()
     ])
 
@@ -39,18 +40,19 @@ export function topBar() {
         k.go("wallet")
     });
 
-    walletFrame = k.add([
-        k.rect(190, 45),
-        k.pos(210, 10),
+    const walletFrame = k.add([
+        k.rect(250, 50),
+        k.pos(270, 10),
         k.color(255, 255, 255),
         k.area()
     ])
 
-    walletText = k.add([
+    const walletText = k.add([
         k.text("[W] Wallet"),
-        k.pos(220, 20),
+        k.pos(395, 35),
         k.color(20, 20, 20),
         k.scale(0.75),
+        k.anchor("center"),
         k.area()
     ])
 
@@ -73,18 +75,19 @@ export function topBar() {
         k.go("exchange")
     });
 
-    exchangeFrame = k.add([
-        k.rect(220, 45),
-        k.pos(410, 10),
+    const exchangeFrame = k.add([
+        k.rect(250, 50),
+        k.pos(530, 10),
         k.color(255, 255, 255),
         k.area()
     ])
 
-    exchangeText = k.add([
+    const exchangeText = k.add([
         k.text("[E] Exchange"),
-        k.pos(420, 20),
+        k.pos(655, 35),
         k.color(20, 20, 20),
         k.scale(0.75),
+        k.anchor("center"),
         k.area()
     ])
 
@@ -107,18 +110,19 @@ export function topBar() {
         k.go("store")
     });
 
-    storeFrame = k.add([
-        k.rect(190, 45),
-        k.pos(640, 10),
+    const storeFrame = k.add([
+        k.rect(250, 50),
+        k.pos(790, 10),
         k.color(255, 255, 255),
         k.area()
     ])
 
-    storeText = k.add([
+    const storeText = k.add([
         k.text("[S] Store"),
-        k.pos(650, 20),
+        k.pos(915, 35),
         k.color(20, 20, 20),
         k.scale(0.75),
+        k.anchor("center"),
         k.area()
     ])
 
@@ -134,4 +138,38 @@ export function topBar() {
         console.log("Changing to store scene")
         k.go("store")
     })
+}
+
+export function topInfo() {
+    // Frame
+    const frame = k.add([
+        k.rect(1580, 100),
+        k.pos(10, 70),
+        k.color(255, 255, 255),
+        k.area()
+    ])
+
+    // Hashrate
+    const hashrateHeading = k.add([
+        k.text("Hashrate"),
+        k.pos(30, 80),
+        k.color(20, 20, 20),
+        k.scale(0.75),
+    ])
+
+    const hashrateFrame = k.add([
+        k.rect(160, 50),
+        k.pos(20, 110),
+        k.color(240, 240, 240)
+    ])
+
+    const hashrateText = k.add([
+        k.text("888.88m"),
+        k.pos(30, 120),
+        k.color(20, 20, 20),
+        k.scale(1),
+    ])
+
+    // Function
+
 }

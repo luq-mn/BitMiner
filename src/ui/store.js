@@ -1,9 +1,9 @@
-import { topBar } from './topBar';
+import { topNav } from './topBar';
 
 export function StoreScene() {
     k.scene("store", () => {
         // Title text
         
-        bar = topBar()
+        bar = topNav()
     })
 }

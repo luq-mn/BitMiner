@@ -1,9 +1,9 @@
-import { topBar } from './topBar';
+import { topNav } from './topBar';
 
 export function WalletScene() {
     k.scene("wallet", () => {
         // Title text
         
-        bar = topBar()
+        bar = topNav()
     })
 }
