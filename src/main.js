@@ -6,11 +6,11 @@ k = kaboom({
 });
 
 // Import UIs
-import { HomeScene } from './ui/home';
-import { MiningScene } from './ui/mining';
-import { WalletScene } from './ui/wallet';
-import { ExchangeScene } from './ui/exchange';
-import { StoreScene } from './ui/store';
+import { HomeScene } from './ui/scenes/home';
+import { MiningScene } from './ui/scenes/mining';
+import { WalletScene } from './ui/scenes/wallet';
+import { ExchangeScene } from './ui/scenes/exchange';
+import { StoreScene } from './ui/scenes/store';
 
 HomeScene()
 MiningScene()

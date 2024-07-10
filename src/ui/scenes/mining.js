@@ -1,4 +1,4 @@
-import { topInfo, topNav } from './topBar';
+import { topInfo, topNav } from '../topBar';
 
 export function MiningScene() {
     k.scene("mining", () => {

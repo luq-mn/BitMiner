@@ -1,3 +1,5 @@
+import { cryptoTopInfoHover } from "./hover";
+
 export function topNav() {
     // Mining scene
     k.onKeyPress("q" || "Q", () => {
@@ -170,6 +172,25 @@ export function topInfo() {
         k.scale(1),
     ])
 
-    // Function
+    // Crypto
+    const cryptoHeading = k.add([
+        k.text("Crypto"),
+        k.pos(200, 80),
+        k.color(20, 20, 20),
+        k.scale(0.75),
+    ])
 
+    const cryptoFrame = k.add([
+        k.rect(240, 50),
+        k.pos(190, 110),
+        k.color(240, 240, 240),
+        k.area()
+    ])
+
+    const cryptoText = k.add([
+        k.text("BTC 888.88m"),
+        k.pos(200, 120),
+        k.color(20, 20, 20),
+        k.scale(1),
+    ])
 }
