@@ -1,3 +1,15 @@
+function scaleW(value) {
+    return (value / 1600) * k.width();
+}
+
+function scaleH(value) {
+    return (value / 900) * k.height();
+}
+
+function scaleFont(value) {
+    return Math.min(scaleW(value), scaleH(value));
+}
+
 export function topNav() {
     // Mining scene
     k.onKeyPress("q" || "Q", () => {
@@ -6,17 +18,17 @@ export function topNav() {
     });
 
     const miningFrame = k.add([
-        k.rect(250, 50),
-        k.pos(10, 10),
+        k.rect(scaleW(250), scaleH(50)),
+        k.pos(scaleW(10), scaleH(10)),
         k.color(255, 255, 255),
         k.area()
     ])
-
+    
     const miningText = k.add([
         k.text("[Q] Mining"),
-        k.pos(135, 35),
+        k.pos(scaleW(135), scaleH(35)),
         k.color(20, 20, 20),
-        k.scale(0.75),
+        k.scale(scaleFont(0.75)),
         k.anchor("center"),
         k.area()
     ])
@@ -42,7 +54,7 @@ export function topNav() {
 
     const walletFrame = k.add([
         k.rect(250, 50),
-        k.pos(270, 10),
+        k.pos(scaleH(270), scaleW(10)),
         k.color(255, 255, 255),
         k.area()
     ])
@@ -121,7 +133,7 @@ export function topNav() {
         k.text("[S] Store"),
         k.pos(915, 35),
         k.color(20, 20, 20),
-        k.scale(0.75),
+        k.scale(scaleFont(0.75)),
         k.anchor("center"),
         k.area()
     ])
@@ -137,6 +149,27 @@ export function topNav() {
     storeFrame.onClick(() => {
         console.log("Changing to store scene")
         k.go("store")
+    })
+
+    // Dynamic resize
+    k.onResize(() => {
+        // Mining
+        miningFrame.width = scaleW(250)
+        miningFrame.height = scaleH(50)
+        miningFrame.pos.x = scaleW(10)
+        miningFrame.pos.y = scaleH(10)
+        miningText.pos.x = scaleW(135)
+        miningText.pos.y = scaleH(35)
+        miningText.scale = scaleFont(0.75)
+
+        // Wallet
+        walletFrame.width = scaleW(250)
+        walletFrame.height = scaleH(50)
+        walletFrame.pos.x = scaleW(270)
+        walletFrame.pos.y = scaleW(10)
+        walletText.pos.x = scaleW(395)
+        walletText.pos.y = scaleH(35)
+        walletText.scale = scaleFont(0.75)
     })
 }
 
